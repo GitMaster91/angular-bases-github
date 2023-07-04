@@ -1,0 +1,29 @@
+<h1>{{ title }}</h1>
+<hr />
+<p>
+  Bienvenidos a Angular
+</p>
+
+<h3>Users</h3>
+
+<ul>
+  <li *ngFor="let users of arrNames">
+    {{users}}
+  </li>
+</ul>
+
+<p>Score: <strong>{{ initialValue }}</strong></p>
+<button (click)="resetFn()">Reset</button>
+<button (click)="addFn()">Add</button>
+
+<div
+style="border: 2px solid royalblue; border-radius: 17px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <h3>Counter: {{ counter }}</h3>
+
+  <div style="margin: 0.5rem;">
+    <button #btn1 (click)="decreaseBy(getButtonValue(btn1))">-5</button>
+    <button (click)="resetFn2()">0</button>
+    <button #btn2 (click)="increaseBy(getButtonValue(btn2))">+5</button>
+  </div>
+
+</div>
