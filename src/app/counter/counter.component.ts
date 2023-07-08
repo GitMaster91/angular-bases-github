@@ -1,21 +1,27 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss']
 })
-export class CounterComponent {
-
+export class CounterComponent implements OnInit, AfterViewInit {
+  @Input() theNumber: number = 100;
   public title: string = 'Mi primera App de Angular';
   public arrNames: string[] = ['Luis', 'Leydi'];
-  public initialValue: number = 7;
+  public initialValue: number = this.theNumber;
   public counter: number = 0;
 
   constructor() {
     this.iniciarProceso();
+    this.counter = this.theNumber;
   };
 
+  ngOnInit(): void {
+  };
+
+  ngAfterViewInit(): void {
+  };
 
   public async iniciarProceso() {
     await this.fn1();
