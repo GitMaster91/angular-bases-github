@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { CounterComponent } from './counter.component';
 import { NgModule } from "@angular/core";
 
@@ -7,6 +8,9 @@ import { NgModule } from "@angular/core";
   ],
   exports: [
     CounterComponent
+  ],
+  imports: [
+    CommonModule
   ]
 })
 export class CounterModule {};

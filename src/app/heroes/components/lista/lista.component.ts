@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { User } from '../hero/hero.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
