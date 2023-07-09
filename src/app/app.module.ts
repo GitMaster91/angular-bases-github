@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { ListaComponent } from './heroes/lista/lista.component';
+import { LoaderComponent } from './loader/loader.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     HeroComponent,
-    ListaComponent
+    ListaComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

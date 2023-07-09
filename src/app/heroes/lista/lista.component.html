@@ -1,1 +1,66 @@
-<p>lista works!</p>
+<div>
+  <div *ngFor="let user of users">
+    <p>{{user.id}}-{{user.country}}-{{user.name}}</p>
+  </div>
+</div>
+
+<button
+  class="btn btn-primary mx-1"
+  (click)="addUser()"
+>
+  Add
+</button>
+
+
+<form [formGroup]="myForm">
+  <label>User to Delete</label>
+  <input
+    type="number"
+    min="1"
+    [max]="maxNum"
+    formControlName="userId"
+  />
+  <button
+    class="btn btn-danger mx-1"
+    (click)="deleteUser()"
+  >
+    Delete
+  </button>
+</form>
+
+<hr />
+
+<h3>Listado de Héroes</h3>
+
+<div *ngIf="showDeletedHero; else nothingWasDeleted">
+  <h3>
+    Héroe borrado
+    <small class="text-danger"> {{ showDeletedHero }} </small>
+  </h3>
+</div>
+
+<ng-template #nothingWasDeleted>
+  <h3>No ha borrado algún héroe</h3>
+</ng-template>
+
+
+<button
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger"
+  *ngIf="heroesNames.length"
+>
+  Borrar último héroe
+</button>
+
+<ul class="mt-2 list-group">
+  <li class="list-group-item" *ngFor="let hero of heroesNames">
+    {{ hero }}
+  </li>
+</ul>
+
+<button
+  (click)="refreshFn()"
+  class="btn btn-outline-success"
+>
+  Refresh
+</button>
