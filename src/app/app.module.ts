@@ -3,16 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter/counter.component';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { ListaComponent } from './heroes/lista/lista.component';
 import { LoaderComponent } from './loader/loader.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CounterModule } from './counter/components/counter/counter.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent,
     HeroComponent,
     ListaComponent,
     LoaderComponent
@@ -20,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CounterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
