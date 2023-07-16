@@ -1,0 +1,19 @@
+<div style="border: 2px solid dodgerblue; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+
+  <div style="margin: 2rem;">
+    <h2>Father - Children List - Result: {{factorResult}}</h2>
+  </div>
+
+  <div style="margin: 2rem;">
+    <app-child1 [children1]="humanFeeling" *ngIf="true"></app-child1>
+  </div>
+
+  <div style="margin: 2rem;">
+    <app-child2 [children2]="humanFeeling"></app-child2>
+  </div>
+
+  <div style="margin: 2rem;">
+    <app-child3 [children3]="humanFeeling"></app-child3>
+  </div>
+
+</div>
