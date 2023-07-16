@@ -13,7 +13,7 @@ import { Child2Component } from './children/child2/child2.component';
 import { Child3Component } from './children/child3/child3.component';
 import { FatherComponent } from './father/father.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+// import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HeroesModule,
     DbzModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    // MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
