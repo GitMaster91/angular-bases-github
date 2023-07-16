@@ -5,17 +5,21 @@
       let character of characterList;
       let i = index;
       let isEven = even;
-      let isOdd = odd;
+      let isLast = last;
     "
     class="list-group-item  list-group-item-action"
     [ngClass]="
       {
         'list-group-item-primary': isEven,
-        'list-group-item-dark': isOdd
+        'list-group-item-dark': isLast
       }
     "
   >
-    <span> {{ i + 1 }}. </span>
+    <span
+      class="text-primary"
+    >
+      {{ i + 1 }}.
+    </span>
     <span>{{ character.name }} - </span>
     <strong>Power : </strong>
     <span>{{ character.power }}</span>
