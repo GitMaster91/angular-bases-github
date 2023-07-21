@@ -1,5 +1,5 @@
 <h4>Agregar personaje</h4>
-<form class="row">
+<form class="row" (ngSubmit)="emitCharacterFn()">
   <input
     type="text"
     placeholder="Nombre"
@@ -18,10 +18,13 @@
   <button
     type="submit"
     class="btn btn-primary"
-    (click)="emitCharacterFn()"
   >
     Agregar
   </button>
 
   <pre>{{character | json}}</pre>
 </form>
+
+<hr />
+<button class="btn btn-primary" (click)="emitFn()">My button Emit</button>
+<button class="btn btn-info mx-2" (click)="testEmit()">Emit Test1</button>
