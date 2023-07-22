@@ -2,18 +2,60 @@
 
   <div style="margin: 2rem;">
     <h2>Father - Children List - Result: {{factorResult}}</h2>
+
+    <div class="row mt-3">
+      <div class="col-4">
+        <p class="text-center">Child 1 - Data : </p>
+        <div *ngIf="dateToShow?.id === 1">
+          <p>{{dateToShow.id}} - {{ dateToShow.name }}</p>
+          <ul>
+            <li *ngFor="let color of dateToShow.colors">{{ color }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <p class="text-center">Child 2 - Data : </p>
+        <div *ngIf="dateToShow?.id === 2">
+          <p>{{dateToShow.id}} - {{ dateToShow.name }}</p>
+          <ul>
+            <li *ngFor="let color of dateToShow.colors">{{ color }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <p class="text-center">Child 3 - Data : </p>
+        <div *ngIf="dateToShow?.id === 3">
+          <p>{{dateToShow.id}} - {{ dateToShow.name }}</p>
+          <ul>
+            <li *ngFor="let color of dateToShow.colors">{{ color }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div style="margin: 2rem;">
-    <app-child1 [children1]="humanFeeling" *ngIf="true"></app-child1>
+    <app-child1
+      (childOutput1)="fatherMethod1($event)"
+      [children1]="humanFeeling" *ngIf="true"
+    >
+    </app-child1>
   </div>
 
   <div style="margin: 2rem;">
-    <app-child2 [children2]="humanFeeling"></app-child2>
+    <app-child2
+      (dataFromChild2)="fatherMethod1($event)"
+      [children2]="humanFeeling"
+    >
+    </app-child2>
   </div>
 
   <div style="margin: 2rem;">
-    <app-child3 [children3]="humanFeeling"></app-child3>
+    <app-child3
+      (dataFromChild3)="fatherMethod1($event)"
+      [children3]="humanFeeling"
+    >
+    </app-child3>
   </div>
 
 </div>
