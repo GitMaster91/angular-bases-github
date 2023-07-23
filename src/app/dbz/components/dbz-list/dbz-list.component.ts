@@ -9,7 +9,7 @@ import { Character } from '../../interfaces/character.interface';
 export class DbzListComponent {
 
   @Output()
-  public idxToDelete: EventEmitter<number> = new EventEmitter();
+  public idxToDelete: EventEmitter<number> = new EventEmitter<number>();
 
 
   @Input()

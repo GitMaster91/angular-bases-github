@@ -1,6 +1,7 @@
 <h4>Listado</h4>
 <ul class="list-group">
-  <li
+  <ng-container *ngIf="characterList.length > 0; else noCharactersContainer">
+    <li
     *ngFor="
       let character of characterList;
       let i = index;
@@ -30,4 +31,12 @@
     <button class="btn btn-danger" (click)="onDelete(i)">X</button>
 
   </li>
+  </ng-container>
+
+
 </ul>
+
+<!-- This will be shown when characterList is empty -->
+<ng-template #noCharactersContainer>
+  <p class="fs-3 badge bg-danger">No characters to display.</p>
+</ng-template>
