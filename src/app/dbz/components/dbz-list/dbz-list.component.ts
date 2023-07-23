@@ -9,7 +9,7 @@ import { Character } from '../../interfaces/character.interface';
 export class DbzListComponent {
 
   @Output()
-  public idxToDelete: EventEmitter<number> = new EventEmitter<number>();
+  public idxToDelete: EventEmitter<string> = new EventEmitter<string>();
 
 
   @Input()
@@ -18,7 +18,10 @@ export class DbzListComponent {
   ];
 
 
-  public onDelete(idx: number): void {
-    this.idxToDelete.emit(idx);
+  public onDelete(id?: string): void {
+
+    if (!id) return;
+
+    this.idxToDelete.emit(id);
   };
 };
