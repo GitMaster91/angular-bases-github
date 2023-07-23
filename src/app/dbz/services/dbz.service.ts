@@ -36,13 +36,14 @@ export class DbzService {
   };
 
   public deleteCharacterFn(id: string): void {
-    if (id || this.characters.length) {
-      console.error("Invalid index. Index out of range.");
-      return;
-    };
+    // if (id || this.characters.length) {
+    //   console.error("Invalid index. Index out of range.");
+    //   return;
+    // };
 
-    this.characters.filter((ch: Character) => {
+    this.characters = this.characters.filter((ch: Character) => {
       return ch.id !== id;
     });
+
   };
 };
