@@ -25,8 +25,18 @@ export class MainPageComponent {
     console.log('theUser main page',  { ...theUser, id: this.num++ } );
   }
 
-  public fatherFnString(theStr: any): void {
+  public onNewCharacterFn(theStr: any): void {
     console.log('check str', theStr);
+    this.characters.push(theStr);
+  };
+
+  public deleteCharacterFn(theIdx: number): void {
+    if (theIdx < 0 || theIdx >= this.characters.length) {
+      console.error("Invalid index. Index out of range.");
+      return;
+    };
+
+    this.characters.splice(theIdx, 1);
   };
 
 };

@@ -3,10 +3,16 @@
 
 <div class="row">
   <div class="col">
-    <app-dbz-list [characterList]="characters"></app-dbz-list>
+    <app-dbz-list
+      [characterList]="characters"
+      (idxToDelete)="deleteCharacterFn($event)"
+    >
+    </app-dbz-list>
   </div>
   <div class="col">
-    <app-dbz-form>
+    <app-dbz-form
+      (onNewCharacter)="onNewCharacterFn($event)"
+    >
     </app-dbz-form>
   </div>
 </div>

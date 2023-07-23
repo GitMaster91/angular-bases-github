@@ -25,16 +25,17 @@ export class DbzFormComponent {
     power: 0
   };
 
+
   public emitCharacterFn(): void {
     console.log('emit', this.character);
 
     if (this.character.name.length === 0) return;
 
+    // debugger;
     this.onNewCharacter.emit(this.character);
     this.theEmitString.emit('Luis Alberto');
 
-    this.character.name  = '';
-    this.character.power = 0;
+    this.character = { name: '', power:  0 };
   };
 
   public emitFn(): void {
