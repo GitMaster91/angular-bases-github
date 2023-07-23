@@ -27,7 +27,6 @@ export class DbzFormComponent {
 
 
   public emitCharacterFn(): void {
-    console.log('emit', this.character);
 
     if (this.character.name.length === 0) return;
 

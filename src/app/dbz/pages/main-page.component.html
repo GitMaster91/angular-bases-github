@@ -4,14 +4,14 @@
 <div class="row">
   <div class="col">
     <app-dbz-list
-      [characterList]="characters"
-      (idxToDelete)="deleteCharacterFn($event)"
+      [characterList]="_dbzService.characters"
+      (idxToDelete)="_dbzService.deleteCharacterFn($event)"
     >
     </app-dbz-list>
   </div>
   <div class="col">
     <app-dbz-form
-      (onNewCharacter)="onNewCharacterFn($event)"
+      (onNewCharacter)="_dbzService.onNewCharacterFn($event)"
     >
     </app-dbz-form>
   </div>

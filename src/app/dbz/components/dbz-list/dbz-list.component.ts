@@ -19,7 +19,6 @@ export class DbzListComponent {
 
 
   public onDelete(idx: number): void {
-    console.log('idx', idx);
     this.idxToDelete.emit(idx);
   };
 };
