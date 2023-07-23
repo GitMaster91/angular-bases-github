@@ -14,7 +14,6 @@ export class MainPageComponent {
   };
 
   public onDeleteCharacter(id: string): void {
-    console.log(id);
     this._dbzService.deleteCharacterFn(id);
   };
 
