@@ -5,8 +5,13 @@
     "ng": "ng",
     "start": "ng serve --open",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "delete:docs": "rm -r docs",
+    "copy:dist": "cp -r dist/bases/* docs",
+    "build:github": "npm run build:href && npm run copy:dist",
+    "build-or-delete-then-build": "npm run delete:docs || echo 'docs folder does not exist.' && npm run build:github"
   },
   "private": true,
   "dependencies": {
@@ -39,3 +44,4 @@
     "typescript": "~4.8.2"
   }
 }
+
